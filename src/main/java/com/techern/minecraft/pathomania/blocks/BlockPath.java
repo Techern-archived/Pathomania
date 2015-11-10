@@ -20,14 +20,14 @@ public class BlockPath extends Block {
      *
      * @since 0.0.1
      */
-    public static BlockPath DIRT_PATH = new BlockPath("blockDirtPath", Material.ground, Block.soundTypeGrass, Blocks.dirt);
+    public static BlockPath DIRT_PATH = new BlockPath("blockDirtPath", Material.ground, Blocks.dirt);
 
     /**
      * The grass {@link BlockPath} instance
      *
      * @since 0.0.1
      */
-    public static BlockPath GRASS_PATH = new BlockPath("blockGrassPath", Material.ground, Block.soundTypeGrass, Blocks.grass);
+    public static BlockPath GRASS_PATH = new BlockPath("blockGrassPath", Material.ground, Blocks.grass);
 
     /**
      * The {@link Block} to use as a fallback
@@ -51,15 +51,15 @@ public class BlockPath extends Block {
      *
      * @param name The name of this {@link BlockPath}
      * @param material The {@link Material} used for this {@link BlockPath}
-     * @paran soundType The {@link net.minecraft.block.Block.SoundType} used by this {@link BlockPath}
      * @param fallbackBlock The {@link Block} used as a fallback
      *
      * @since 0.0.1
      */
-    public BlockPath(String name, Material material, SoundType soundType, Block fallbackBlock) {
+    public BlockPath(String name, Material material, Block fallbackBlock) {
         super(material);
         this.setUnlocalizedName(name);
-        this.setStepSound(soundType);
+
+        this.setStepSound(fallbackBlock.stepSound);
 
         this.fallbackBlock = fallbackBlock;
 
