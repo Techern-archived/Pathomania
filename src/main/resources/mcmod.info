@@ -1,13 +1,13 @@
 [
 {
-  "modid": "pathomatic",
-  "name": "Pathomatic",
+  "modid": "pathomania",
+  "name": "Pathomania",
   "description": "Multiple paths for Minecraft.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["CruzBishop"],
+  "authorList": ["Cruz Bishop"],
   "credits": "The Minecraft team for being so slow with their releases ;)",
   "logoFile": "",
   "screenshots": [],
