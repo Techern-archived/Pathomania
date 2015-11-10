@@ -22,7 +22,7 @@ plugins {
 
 version = "0.0.1-SNAPSHOT"
 group= "com.techern.forge.pathomania" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "pathomania"
+archivesBaseName = "Pathomania"
 
 minecraft {
     version = "1.8-11.14.3.1556"
