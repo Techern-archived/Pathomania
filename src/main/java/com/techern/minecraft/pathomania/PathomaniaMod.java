@@ -1,8 +1,13 @@
 package com.techern.minecraft.pathomania;
 
+import com.techern.minecraft.pathomania.blocks.BlockPath;
+import com.techern.minecraft.pathomania.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -33,13 +38,25 @@ public class PathomaniaMod {
      */
     public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
-    @Mod.EventHandler
-    public static void handlePostInitializationEvent(FMLPostInitializationEvent event) {
+    @SidedProxy(clientSide = "com.techern.minecraft.pathomania.proxy.ClientProxy",
+                serverSide = "com.techern.minecraft.pathomania.proxy.ServerProxy")
+    public static CommonProxy PROXY;
 
-        LOGGER.info("Pathomania version %s has finished loading! :)", MOD_VERSION);
+    @Mod.EventHandler
+    public static void handlePreInitializationEvent(FMLPreInitializationEvent event) {
+
+        LOGGER.debug("Registering blocks");
+
+        GameRegistry.registerBlock(BlockPath.DIRT_PATH, "dirt_path");
 
     }
 
 
+    @Mod.EventHandler
+    public static void handlePostInitializationEvent(FMLPostInitializationEvent event) {
+
+        PROXY.registerBlockInventoryModel(BlockPath.DIRT_PATH, "dirt_path");
+
+    }
 
 }

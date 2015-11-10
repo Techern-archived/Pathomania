@@ -1,0 +1,6 @@
+{
+  "parent": "pathomania:block/cube_path_all",
+  "textures": {
+    "all": "minecraft:blocks/dirt"
+  }
+}
