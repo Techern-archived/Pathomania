@@ -25,6 +25,7 @@ public class ClientProxy extends CommonProxy {
         PathomaniaMod.LOGGER.trace("Got a request to register inventory model for " + block.getLocalizedName() + ", doing so");
 
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation("pathomania:" + modelName, "inventory"));
+
     }
 
 }

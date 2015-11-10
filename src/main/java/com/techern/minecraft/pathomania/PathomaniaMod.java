@@ -48,6 +48,7 @@ public class PathomaniaMod {
         LOGGER.debug("Registering blocks");
 
         GameRegistry.registerBlock(BlockPath.DIRT_PATH, "dirt_path");
+        GameRegistry.registerBlock(BlockPath.GRASS_PATH, "grass_path");
 
     }
 
@@ -56,6 +57,7 @@ public class PathomaniaMod {
     public static void handlePostInitializationEvent(FMLPostInitializationEvent event) {
 
         PROXY.registerBlockInventoryModel(BlockPath.DIRT_PATH, "dirt_path");
+        PROXY.registerBlockInventoryModel(BlockPath.GRASS_PATH, "grass_path");
 
     }
 
