@@ -16,18 +16,18 @@ public class BlockPath extends Block {
      *
      * @since 0.0.1
      */
-    public static BlockPath DIRT_PATH = new BlockPath(Material.ground, "blockDirtPath", Block.soundTypeGrass);
+    public static BlockPath DIRT_PATH = new BlockPath("blockDirtPath", Material.ground, Block.soundTypeGrass);
 
     /**
      * Creates a new {@link BlockPath}
      *
-     * @param material The {@link Material} used for this {@link BlockPath}
      * @param name The name of this {@link BlockPath}
+     * @param material The {@link Material} used for this {@link BlockPath}
      * @paran soundType The {@link net.minecraft.block.Block.SoundType} used by this {@link BlockPath}
      *
      * @since 0.0.1
      */
-    public BlockPath(Material material, String name, SoundType soundType) {
+    public BlockPath(String name, Material material, SoundType soundType) {
         super(material);
         this.setUnlocalizedName(name);
         this.setStepSound(soundType);
