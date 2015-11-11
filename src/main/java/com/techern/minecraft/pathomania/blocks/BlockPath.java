@@ -7,10 +7,12 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 
 import java.lang.reflect.Field;
+import java.util.Random;
 
 /**
  * BlockPath; A class used to create path {@link net.minecraft.block.Block}s
@@ -79,6 +81,11 @@ public class BlockPath extends Block {
 
             this.setResistance(resistanceField.getFloat(fallbackBlock));
 
+            Field lightValueField = ReflectionUtilities.getFieldInHierarchy(blockClass, "lightValue");
+            lightValueField.setAccessible(true);
+
+            this.setLightLevel(lightValueField.getFloat(fallbackBlock));
+
         } catch (NoSuchFieldException | IllegalAccessException e) {
             PathomaniaMod.LOGGER.error("Exception while automatically setting path data. It should partially work, though. Contact me, please :(");
             PathomaniaMod.LOGGER.error(e);
@@ -99,6 +106,21 @@ public class BlockPath extends Block {
     @Override
     public boolean isOpaqueCube() {
         return false;
+    }
+
+    /**
+     * Gets the {@link Item} dropped when harvesting this {@link BlockPath}
+     *
+     * @param state The current {@link IBlockState}
+     * @param rand The {@link Random} number given to this block drop
+     * @param fortune The fortune harvested with
+     *
+     * @return By default, the parent block
+     */
+    @Override
+    public Item getItemDropped(IBlockState state, Random rand, int fortune)
+    {
+        return Item.getItemFromBlock(this.fallbackBlock);
     }
 
     /**
