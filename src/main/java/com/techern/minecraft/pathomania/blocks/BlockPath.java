@@ -71,17 +71,17 @@ public class BlockPath extends Block {
         try {
             Class<? extends Block> blockClass = fallbackBlock.getClass();
 
-            Field hardnessField = ReflectionUtilities.getFieldInHierarchy(blockClass, "blockHardness");
+            Field hardnessField = ReflectionUtilities.getFieldInHierarchy(blockClass, "blockHardness", "field_149782_v");
             hardnessField.setAccessible(true);
 
             this.setHardness(hardnessField.getFloat(fallbackBlock));
 
-            Field resistanceField = ReflectionUtilities.getFieldInHierarchy(blockClass, "blockResistance");
+            Field resistanceField = ReflectionUtilities.getFieldInHierarchy(blockClass, "blockResistance", "field_149781_w");
             resistanceField.setAccessible(true);
 
             this.setResistance(resistanceField.getFloat(fallbackBlock));
 
-            Field lightValueField = ReflectionUtilities.getFieldInHierarchy(blockClass, "lightValue");
+            Field lightValueField = ReflectionUtilities.getFieldInHierarchy(blockClass, "lightValue", "field_149784_t");
             lightValueField.setAccessible(true);
 
             this.setLightLevel(lightValueField.getFloat(fallbackBlock));
