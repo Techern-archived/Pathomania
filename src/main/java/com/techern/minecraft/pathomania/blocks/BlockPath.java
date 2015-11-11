@@ -1,5 +1,7 @@
 package com.techern.minecraft.pathomania.blocks;
 
+import com.techern.minecraft.pathomania.PathomaniaMod;
+import com.techern.minecraft.pathomania.util.ReflectionUtilities;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -7,6 +9,8 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
+
+import java.lang.reflect.Field;
 
 /**
  * BlockPath; A class used to create path {@link net.minecraft.block.Block}s
@@ -60,6 +64,25 @@ public class BlockPath extends Block {
         this.setUnlocalizedName(name);
 
         this.setStepSound(fallbackBlock.stepSound);
+
+        //Time for reflection-only use cases
+        try {
+            Class<? extends Block> blockClass = fallbackBlock.getClass();
+
+            Field hardnessField = ReflectionUtilities.getFieldInHierarchy(blockClass, "blockHardness");
+            hardnessField.setAccessible(true);
+
+            this.setHardness(hardnessField.getFloat(fallbackBlock));
+
+            Field resistanceField = ReflectionUtilities.getFieldInHierarchy(blockClass, "blockResistance");
+            resistanceField.setAccessible(true);
+
+            this.setResistance(resistanceField.getFloat(fallbackBlock));
+
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            PathomaniaMod.LOGGER.error("Exception while automatically setting path data. It should partially work, though. Contact me, please :(");
+            PathomaniaMod.LOGGER.error(e);
+        }
 
         this.fallbackBlock = fallbackBlock;
 
