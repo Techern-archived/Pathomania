@@ -1,7 +1,9 @@
 package com.techern.minecraft.pathomania;
 
 import com.techern.minecraft.pathomania.blocks.BlockPath;
+import com.techern.minecraft.pathomania.events.PathomaniaPlayerEvents;
 import com.techern.minecraft.pathomania.proxy.CommonProxy;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -58,6 +60,8 @@ public class PathomaniaMod {
 
         PROXY.registerBlockInventoryModel(BlockPath.DIRT_PATH, "dirt_path");
         PROXY.registerBlockInventoryModel(BlockPath.GRASS_PATH, "grass_path");
+
+        MinecraftForge.EVENT_BUS.register(new PathomaniaPlayerEvents());
 
     }
 
