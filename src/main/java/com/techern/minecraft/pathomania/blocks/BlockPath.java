@@ -91,6 +91,8 @@ public class BlockPath extends Block {
             PathomaniaMod.LOGGER.error(e);
         }
 
+        this.slipperiness = fallbackBlock.slipperiness;
+
         this.fallbackBlock = fallbackBlock;
 
         this.setCreativeTab(CreativeTabs.tabBlock); //TODO: Creative tab for pathways
