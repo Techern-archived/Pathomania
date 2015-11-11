@@ -33,7 +33,7 @@ public class PathomaniaMod {
      *
      * @since 0.0.1
      */
-    public static final String MOD_VERSION = "0.0.1-SNAPSHOT";
+    public static final String MOD_VERSION = "0.0.1";
 
     /**
      * The logger used by the {@link PathomaniaMod}
