@@ -24,6 +24,9 @@ version = "0.0.1-SNAPSHOT"
 group= "com.techern.forge.assets.pathomania" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Pathomania"
 
+sourceCompatibility = JavaVersion.VERSION_1_7
+targetCompatibility = JavaVersion.VERSION_1_7
+
 minecraft {
     version = "1.8-11.14.3.1556"
     runDir = "run"
