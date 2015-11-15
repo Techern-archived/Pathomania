@@ -25,14 +25,16 @@ public class PathomaniaPlayerEvents {
     @SubscribeEvent
     public void playerInteracting(PlayerInteractEvent event) {
         if (event.action.equals(PlayerInteractEvent.Action.RIGHT_CLICK_BLOCK)) {
-            if (event.entityPlayer.getHeldItem().getItem() instanceof ItemSpade) {
-                //TODO: Automatically generate a map of fallback blocks and what to change them to
-                Block block = event.world.getBlockState(event.pos).getBlock();
+            if (event.entityPlayer.getHeldItem() != null) {
+                if (event.entityPlayer.getHeldItem().getItem() instanceof ItemSpade) {
+                    //TODO: Automatically generate a map of fallback blocks and what to change them to
+                    Block block = event.world.getBlockState(event.pos).getBlock();
 
-                if (block instanceof BlockGrass) {
-                    event.world.setBlockState(event.pos, BlockPath.GRASS_PATH.getDefaultState());
-                } else if (block instanceof BlockDirt) {
-                    event.world.setBlockState(event.pos, BlockPath.DIRT_PATH.getDefaultState());
+                    if (block instanceof BlockGrass) {
+                        event.world.setBlockState(event.pos, BlockPath.GRASS_PATH.getDefaultState());
+                    } else if (block instanceof BlockDirt) {
+                        event.world.setBlockState(event.pos, BlockPath.DIRT_PATH.getDefaultState());
+                    }
                 }
             }
         }
