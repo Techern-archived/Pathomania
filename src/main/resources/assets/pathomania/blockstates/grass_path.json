@@ -1,5 +1,20 @@
 {
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "side": "pathomania:blocks/grass_path_side",
+      "top": "pathomania:blocks/grass_path_top",
+      "bottom": "blocks/dirt"
+    },
+    "model": "pathomania:cube_path_sided",
+    "uvlock": true
+  },
   "variants": {
-    "normal": { "model": "pathomania:grass_normal_path" }
+    "normal": [{
+
+    }],
+    "inventory": [{
+
+    }]
   }
 }

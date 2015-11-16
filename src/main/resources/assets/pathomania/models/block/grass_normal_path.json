@@ -1,9 +1,0 @@
-{
-  "parent": "pathomania:block/grass_path",
-  "textures": {
-    "particle": "blocks/dirt",
-    "bottom": "blocks/dirt",
-    "top": "pathomania:blocks/grass_path_top",
-    "side": "pathomania:blocks/grass_path_side"
-  }
-}
