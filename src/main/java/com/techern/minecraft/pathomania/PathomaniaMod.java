@@ -50,6 +50,9 @@ public class PathomaniaMod {
         LOGGER.debug("Registering blocks");
 
         GameRegistry.registerBlock(BlockPath.DIRT_PATH, "dirt_path");
+        GameRegistry.registerBlock(BlockPath.COARSE_DIRT_PATH, "coarse_dirt_path");
+        GameRegistry.registerBlock(BlockPath.PODZOL_PATH, "podzol_path");
+
         GameRegistry.registerBlock(BlockPath.GRASS_PATH, "grass_path");
 
     }
@@ -59,6 +62,9 @@ public class PathomaniaMod {
     public static void handlePostInitializationEvent(FMLPostInitializationEvent event) {
 
         PROXY.registerBlockInventoryModel(BlockPath.DIRT_PATH, "dirt_path");
+        PROXY.registerBlockInventoryModel(BlockPath.COARSE_DIRT_PATH, "coarse_dirt_path");
+        PROXY.registerBlockInventoryModel(BlockPath.PODZOL_PATH, "podzol_path");
+
         PROXY.registerBlockInventoryModel(BlockPath.GRASS_PATH, "grass_path");
 
         MinecraftForge.EVENT_BUS.register(new PathomaniaPlayerEvents());

@@ -4,6 +4,7 @@ import com.techern.minecraft.pathomania.blocks.BlockPath;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirt;
 import net.minecraft.block.BlockGrass;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -28,12 +29,19 @@ public class PathomaniaPlayerEvents {
             if (event.entityPlayer.getHeldItem() != null) {
                 if (event.entityPlayer.getHeldItem().getItem() instanceof ItemSpade) {
                     //TODO: Automatically generate a map of fallback blocks and what to change them to
-                    Block block = event.world.getBlockState(event.pos).getBlock();
+                    IBlockState state = event.world.getBlockState(event.pos);
+                    Block block = state.getBlock();
 
                     if (block instanceof BlockGrass) {
                         event.world.setBlockState(event.pos, BlockPath.GRASS_PATH.getDefaultState());
                     } else if (block instanceof BlockDirt) {
-                        event.world.setBlockState(event.pos, BlockPath.DIRT_PATH.getDefaultState());
+                        if (state.getValue(BlockDirt.VARIANT).equals(BlockDirt.DirtType.DIRT)) {
+                            event.world.setBlockState(event.pos, BlockPath.DIRT_PATH.getDefaultState());
+                        } else if (state.getValue(BlockDirt.VARIANT).equals(BlockDirt.DirtType.COARSE_DIRT)) {
+                            event.world.setBlockState(event.pos, BlockPath.COARSE_DIRT_PATH.getDefaultState());
+                        } else if (state.getValue(BlockDirt.VARIANT).equals(BlockDirt.DirtType.PODZOL)) {
+                            event.world.setBlockState(event.pos, BlockPath.PODZOL_PATH.getDefaultState());
+                        }
                     }
                 }
             }

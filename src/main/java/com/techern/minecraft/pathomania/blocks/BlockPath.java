@@ -26,14 +26,28 @@ public class BlockPath extends Block {
      *
      * @since 0.0.1
      */
-    public static BlockPath DIRT_PATH = new BlockPath("blockDirtPath", Material.ground, Blocks.dirt);
+    public static BlockPath DIRT_PATH = new BlockPath("blockDirtPath", Material.ground, Blocks.dirt, 0);
+
+    /**
+     * The coarse dirt {@link BlockPath} instance
+     *
+     * @since 0.9.0
+     */
+    public static BlockPath COARSE_DIRT_PATH = new BlockPath("blockCoarseDirtPath", Material.ground, Blocks.dirt, 1);
+
+    /**
+     * The podzol {@link BlockPath} instance
+     *
+     * @since 0.9.0
+     */
+    public static BlockPath PODZOL_PATH = new BlockPath("blockPodzolPath", Material.ground, Blocks.dirt, 2);
 
     /**
      * The grass {@link BlockPath} instance
      *
      * @since 0.0.1
      */
-    public static BlockPath GRASS_PATH = new BlockPath("blockGrassPath", Material.ground, Blocks.grass);
+    public static BlockPath GRASS_PATH = new BlockPath("blockGrassPath", Material.ground, Blocks.grass, 0);
 
     /**
      * The {@link Block} to use as a fallback
@@ -41,6 +55,13 @@ public class BlockPath extends Block {
      * @since 0.0.1
      */
     private Block fallbackBlock;
+
+    /**
+     * An integer holding the {@code fallbackBlock}'s metadata
+     *
+     * @since 0.9.0
+     */
+    private int fallbackMetadata;
 
     /**
      * Gets this {@link BlockPath}'s fallback {@link Block}
@@ -61,7 +82,7 @@ public class BlockPath extends Block {
      *
      * @since 0.0.1
      */
-    public BlockPath(String name, Material material, Block fallbackBlock) {
+    public BlockPath(String name, Material material, Block fallbackBlock, int fallbackMetadata) {
         super(material);
         this.setUnlocalizedName(name);
 
@@ -94,8 +115,8 @@ public class BlockPath extends Block {
         this.slipperiness = fallbackBlock.slipperiness;
 
         this.fallbackBlock = fallbackBlock;
+        this.fallbackMetadata = fallbackMetadata;
 
-        this.setCreativeTab(CreativeTabs.tabBlock); //TODO: Creative tab for pathways
         this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.9375F, 1.0F);
 
     }
@@ -108,6 +129,17 @@ public class BlockPath extends Block {
     @Override
     public boolean isOpaqueCube() {
         return false;
+    }
+
+    /**
+     * Get the damage value that this Block should drop
+     *
+     * @param state The current {@link IBlockState}
+     * @since 0.9.0
+     */
+    @Override
+    public int damageDropped(IBlockState state) {
+        return this.fallbackMetadata;
     }
 
     /**
@@ -141,7 +173,7 @@ public class BlockPath extends Block {
 
         if (worldIn.getBlockState(pos.up()).getBlock().getMaterial().isSolid())
         {
-            worldIn.setBlockState(pos, this.getFallbackBlock().getDefaultState());
+            worldIn.setBlockState(pos, this.getFallbackBlock().getStateFromMeta(this.fallbackMetadata));
         }
     }
 
