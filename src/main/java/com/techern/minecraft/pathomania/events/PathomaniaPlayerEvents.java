@@ -4,6 +4,7 @@ import com.techern.minecraft.pathomania.blocks.BlockDirtPath;
 import com.techern.minecraft.pathomania.blocks.BlockPath;
 import net.minecraft.block.*;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -27,7 +28,7 @@ public class PathomaniaPlayerEvents {
         if (event.action.equals(PlayerInteractEvent.Action.RIGHT_CLICK_BLOCK)) {
             if (event.entityPlayer.getHeldItem() != null) {
                 if (event.entityPlayer.getHeldItem().getItem() instanceof ItemSpade) {
-                    //TODO: Automatically generate a map of fallback blocks and what to change them to
+
                     IBlockState state = event.world.getBlockState(event.pos);
                     Block block = state.getBlock();
 
@@ -39,6 +40,14 @@ public class PathomaniaPlayerEvents {
                         event.world.setBlockState(event.pos, BlockPath.GRAVEL_PATH.getDefaultState());
                     } else if (block instanceof BlockClay) {
                         event.world.setBlockState(event.pos, BlockPath.CLAY_PATH.getDefaultState());
+                    }
+                } else if (event.entityPlayer.getHeldItem().getItem() instanceof ItemPickaxe) {
+
+                    IBlockState state = event.world.getBlockState(event.pos);
+                    Block block = state.getBlock();
+
+                    if (block instanceof BlockHardenedClay) {
+                        event.world.setBlockState(event.pos, BlockPath.HARDENED_CLAY_PATH.getDefaultState());
                     }
                 }
             }

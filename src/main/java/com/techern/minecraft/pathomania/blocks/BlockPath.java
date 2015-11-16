@@ -42,6 +42,13 @@ public class BlockPath extends Block {
     public static BlockPath GRAVEL_PATH = new BlockPath("blockGravelPath", Material.ground, Blocks.gravel);
 
     /**
+     * The hardened clay {@link BlockPath} instance
+     *
+     * @since 0.9.0
+     */
+    public static BlockPath HARDENED_CLAY_PATH = new BlockPath("blockHardenedClayPath", Material.ground, Blocks.hardened_clay);
+
+    /**
      * The {@link Block} to use as a fallback
      *
      * @since 0.0.1
