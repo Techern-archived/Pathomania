@@ -2,3 +2,4 @@ tile.blockDirtPath.name=Dirt Path
 tile.blockCoarseDirtPath.name=Coarse Dirt Path
 tile.blockPodzolPath.name=Podzol Path
 tile.blockGrassPath.name=Grass Path
+tile.blockGravelPath.name=Gravel Path

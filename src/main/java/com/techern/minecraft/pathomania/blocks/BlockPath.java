@@ -28,6 +28,13 @@ public class BlockPath extends Block {
     public static BlockPath GRASS_PATH = new BlockPath("blockGrassPath", Material.ground, Blocks.grass);
 
     /**
+     * The grass {@link BlockPath} instance
+     *
+     * @since 0.9.0
+     */
+    public static BlockPath GRAVEL_PATH = new BlockPath("blockGravelPath", Material.ground, Blocks.gravel);
+
+    /**
      * The {@link Block} to use as a fallback
      *
      * @since 0.0.1
