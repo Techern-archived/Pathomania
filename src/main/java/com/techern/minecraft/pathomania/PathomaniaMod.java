@@ -1,5 +1,6 @@
 package com.techern.minecraft.pathomania;
 
+import com.techern.minecraft.pathomania.blocks.BlockDirtPath;
 import com.techern.minecraft.pathomania.blocks.BlockPath;
 import com.techern.minecraft.pathomania.events.PathomaniaPlayerEvents;
 import com.techern.minecraft.pathomania.proxy.CommonProxy;
@@ -49,9 +50,7 @@ public class PathomaniaMod {
 
         LOGGER.debug("Registering blocks");
 
-        GameRegistry.registerBlock(BlockPath.DIRT_PATH, "dirt_path");
-        GameRegistry.registerBlock(BlockPath.COARSE_DIRT_PATH, "coarse_dirt_path");
-        GameRegistry.registerBlock(BlockPath.PODZOL_PATH, "podzol_path");
+        GameRegistry.registerBlock(BlockDirtPath.INSTANCE, "dirt_path");
 
         GameRegistry.registerBlock(BlockPath.GRASS_PATH, "grass_path");
 
@@ -61,9 +60,7 @@ public class PathomaniaMod {
     @Mod.EventHandler
     public static void handlePostInitializationEvent(FMLPostInitializationEvent event) {
 
-        PROXY.registerBlockInventoryModel(BlockPath.DIRT_PATH, "dirt_path");
-        PROXY.registerBlockInventoryModel(BlockPath.COARSE_DIRT_PATH, "coarse_dirt_path");
-        PROXY.registerBlockInventoryModel(BlockPath.PODZOL_PATH, "podzol_path");
+        PROXY.registerBlockInventoryModel(BlockDirtPath.INSTANCE, "dirt_path");
 
         PROXY.registerBlockInventoryModel(BlockPath.GRASS_PATH, "grass_path");
 

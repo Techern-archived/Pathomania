@@ -10,9 +10,25 @@
     "uvlock": true
   },
   "variants": {
-    "normal": [{
+    "variant": {
+      "dirt": {
+      },
+      "coarse_dirt": {
+        "textures": {
+          "side": "blocks/coarse_dirt",
+          "top": "blocks/coarse_dirt",
+          "bottom": "blocks/coarse_dirt"
+        }
+      },
+      "podzol": {
+        "textures": {
+          "side": "blocks/dirt_podzol_side",
+          "top": "blocks/dirt_podzol_top",
+          "bottom": "blocks/dirt"
+        }
+      }
+    },
 
-    }],
     "inventory": [{
 
     }]

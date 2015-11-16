@@ -1,5 +1,6 @@
 package com.techern.minecraft.pathomania.events;
 
+import com.techern.minecraft.pathomania.blocks.BlockDirtPath;
 import com.techern.minecraft.pathomania.blocks.BlockPath;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirt;
@@ -35,13 +36,7 @@ public class PathomaniaPlayerEvents {
                     if (block instanceof BlockGrass) {
                         event.world.setBlockState(event.pos, BlockPath.GRASS_PATH.getDefaultState());
                     } else if (block instanceof BlockDirt) {
-                        if (state.getValue(BlockDirt.VARIANT).equals(BlockDirt.DirtType.DIRT)) {
-                            event.world.setBlockState(event.pos, BlockPath.DIRT_PATH.getDefaultState());
-                        } else if (state.getValue(BlockDirt.VARIANT).equals(BlockDirt.DirtType.COARSE_DIRT)) {
-                            event.world.setBlockState(event.pos, BlockPath.COARSE_DIRT_PATH.getDefaultState());
-                        } else if (state.getValue(BlockDirt.VARIANT).equals(BlockDirt.DirtType.PODZOL)) {
-                            event.world.setBlockState(event.pos, BlockPath.PODZOL_PATH.getDefaultState());
-                        }
+                        event.world.setBlockState(event.pos, BlockDirtPath.INSTANCE.getDefaultState().withProperty(BlockDirtPath.VARIANT, state.getValue(BlockDirtPath.VARIANT)));
                     }
                 }
             }
