@@ -60,9 +60,11 @@ public class PathomaniaMod {
     @Mod.EventHandler
     public static void handlePostInitializationEvent(FMLPostInitializationEvent event) {
 
-        PROXY.registerBlockInventoryModel(BlockDirtPath.INSTANCE, "dirt_path");
+        PROXY.registerBlockInventoryModel(BlockDirtPath.INSTANCE, 0, "dirt_path");
+        PROXY.registerBlockInventoryModel(BlockDirtPath.INSTANCE, 1, "dirt_path");
+        PROXY.registerBlockInventoryModel(BlockDirtPath.INSTANCE, 2, "dirt_path");
 
-        PROXY.registerBlockInventoryModel(BlockPath.GRASS_PATH, "grass_path");
+        PROXY.registerBlockInventoryModel(BlockPath.GRASS_PATH, 0, "grass_path");
 
         MinecraftForge.EVENT_BUS.register(new PathomaniaPlayerEvents());
 

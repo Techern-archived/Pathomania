@@ -17,14 +17,15 @@ public class ClientProxy extends CommonProxy {
      * Registers a {@link Block}'s inventory model
      *
      * @param block The {@link Block} being registered
+     * @param metadata The {@link Integer} used to store metadata
      * @param modelName A {@link String} depicting the name of the model
      *
      * @since 0.0.1
      */
-    public void registerBlockInventoryModel(Block block, String modelName) {
+    public void registerBlockInventoryModel(Block block, int metadata, String modelName) {
         PathomaniaMod.LOGGER.trace("Got a request to register inventory model for " + block.getLocalizedName() + ", doing so");
 
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation("pathomania:" + modelName, "inventory"));
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), metadata, new ModelResourceLocation("pathomania:" + modelName, "inventory"));
 
     }
 
