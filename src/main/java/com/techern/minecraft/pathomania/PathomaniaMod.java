@@ -53,7 +53,10 @@ public class PathomaniaMod {
         GameRegistry.registerBlock(BlockDirtPath.INSTANCE, "dirt_path");
 
         GameRegistry.registerBlock(BlockPath.GRASS_PATH, "grass_path");
+
         GameRegistry.registerBlock(BlockPath.GRAVEL_PATH, "gravel_path");
+
+        GameRegistry.registerBlock(BlockPath.CLAY_PATH, "clay_path");
 
     }
 
@@ -68,6 +71,8 @@ public class PathomaniaMod {
         PROXY.registerBlockInventoryModel(BlockPath.GRASS_PATH, 0, "grass_path");
 
         PROXY.registerBlockInventoryModel(BlockPath.GRAVEL_PATH, 0, "gravel_path");
+
+        PROXY.registerBlockInventoryModel(BlockPath.CLAY_PATH, 0, "clay_path");
 
         MinecraftForge.EVENT_BUS.register(new PathomaniaPlayerEvents());
 

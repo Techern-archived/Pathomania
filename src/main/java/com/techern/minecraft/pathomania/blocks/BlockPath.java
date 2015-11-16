@@ -21,6 +21,13 @@ import java.util.Random;
 public class BlockPath extends Block {
 
     /**
+     * The clay {@link BlockPath} instance
+     *
+     * @since 0.9.0
+     */
+    public static BlockPath CLAY_PATH = new BlockPath("blockClayPath", Material.ground, Blocks.clay);
+
+    /**
      * The grass {@link BlockPath} instance
      *
      * @since 0.0.1
@@ -28,7 +35,7 @@ public class BlockPath extends Block {
     public static BlockPath GRASS_PATH = new BlockPath("blockGrassPath", Material.ground, Blocks.grass);
 
     /**
-     * The grass {@link BlockPath} instance
+     * The gravel {@link BlockPath} instance
      *
      * @since 0.9.0
      */

@@ -2,10 +2,7 @@ package com.techern.minecraft.pathomania.events;
 
 import com.techern.minecraft.pathomania.blocks.BlockDirtPath;
 import com.techern.minecraft.pathomania.blocks.BlockPath;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockDirt;
-import net.minecraft.block.BlockGrass;
-import net.minecraft.block.BlockGravel;
+import net.minecraft.block.*;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.util.ChatComponentText;
@@ -40,6 +37,8 @@ public class PathomaniaPlayerEvents {
                         event.world.setBlockState(event.pos, BlockDirtPath.INSTANCE.getDefaultState().withProperty(BlockDirtPath.VARIANT, state.getValue(BlockDirtPath.VARIANT)));
                     } else if (block instanceof BlockGravel) {
                         event.world.setBlockState(event.pos, BlockPath.GRAVEL_PATH.getDefaultState());
+                    } else if (block instanceof BlockClay) {
+                        event.world.setBlockState(event.pos, BlockPath.CLAY_PATH.getDefaultState());
                     }
                 }
             }
