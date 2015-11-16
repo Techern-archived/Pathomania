@@ -12,5 +12,8 @@
         "east":  { "texture": "#side", "cullface": "east" }
       }
     }
-  ]
+  ],
+  "textures": {
+    "particle": "#bottom"
+  }
 }
