@@ -1,7 +1,7 @@
 package com.techern.minecraft.pathomania.blocks;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockDirt;
+import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
@@ -19,38 +19,38 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import java.util.List;
 
 /**
- * An extension of {@link BlockPath} for {@link net.minecraft.block.BlockDirt}
+ * An extension of {@link BlockPath} for {@link net.minecraft.block.BlockPlanks}
  *
  * @since 0.9.0
  */
-public class BlockDirtPath extends BlockPath {
+public class BlockPlankPath extends BlockPath {
 
     /**
-     * The variant of {@link BlockDirtPath}
+     * The variant of {@link BlockPlankPath}
      *
      * @since 0.9.0
      */
-    public static final PropertyEnum VARIANT = PropertyEnum.create("variant", BlockDirt.DirtType.class);
+    public static final PropertyEnum VARIANT = PropertyEnum.create("variant", BlockPlanks.EnumType.class);
 
     /**
-     * The instance of {@link BlockDirtPath}
+     * The instance of {@link BlockPlankPath}
      *
      * @since 0.9.0
      */
-    public static final BlockDirtPath INSTANCE = new BlockDirtPath();
+    public static final BlockPlankPath INSTANCE = new BlockPlankPath();
 
     /**
-     * Creates a new {@link BlockDirtPath}
+     * Creates a new {@link BlockPlankPath}
      *
      * @since 0.9.0
      */
-    public BlockDirtPath() {
-        super("blockDirtPath", Material.ground, Blocks.dirt);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockDirt.DirtType.DIRT));
+    public BlockPlankPath() {
+        super("blockPlankPath", Material.ground, Blocks.planks);
+        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockPlanks.EnumType.OAK));
     }
 
     /**
-     * Creates a {@link BlockState} from this {@link BlockDirtPath}
+     * Creates a {@link BlockState} from this {@link BlockPlankPath}
      *
      * @return The {@link BlockState}
      * @since 0.9.0
@@ -70,19 +70,22 @@ public class BlockDirtPath extends BlockPath {
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item itemIn, CreativeTabs tab, List list)
     {
-        list.add(new ItemStack(this, 1, BlockDirt.DirtType.DIRT.getMetadata()));
-        list.add(new ItemStack(this, 1, BlockDirt.DirtType.COARSE_DIRT.getMetadata()));
-        list.add(new ItemStack(this, 1, BlockDirt.DirtType.PODZOL.getMetadata()));
+        list.add(new ItemStack(this, 1, BlockPlanks.EnumType.OAK.getMetadata()));
+        list.add(new ItemStack(this, 1, BlockPlanks.EnumType.SPRUCE.getMetadata()));
+        list.add(new ItemStack(this, 1, BlockPlanks.EnumType.BIRCH.getMetadata()));
+        list.add(new ItemStack(this, 1, BlockPlanks.EnumType.JUNGLE.getMetadata()));
+        list.add(new ItemStack(this, 1, BlockPlanks.EnumType.ACACIA.getMetadata()));
+        list.add(new ItemStack(this, 1, BlockPlanks.EnumType.DARK_OAK.getMetadata()));
     }
 
     /**
-     * Gets a {@link IBlockState} for this {@link BlockDirtPath} representing the supplied metadata
+     * Gets a {@link IBlockState} for this {@link BlockPlankPath} representing the supplied metadata
      *
      * @since 0.9.0
      */
     public IBlockState getStateFromMeta(int meta)
     {
-        return this.getDefaultState().withProperty(VARIANT, BlockDirt.DirtType.byMetadata(meta));
+        return this.getDefaultState().withProperty(VARIANT, BlockPlanks.EnumType.byMetadata(meta));
     }
 
     /**
@@ -92,18 +95,18 @@ public class BlockDirtPath extends BlockPath {
      */
     public int getMetaFromState(IBlockState state)
     {
-        return ((BlockDirt.DirtType) state.getValue(VARIANT)).getMetadata();
+        return ((BlockPlanks.EnumType) state.getValue(VARIANT)).getMetadata();
     }
 
     /**
-     * Get the damage value that this {@link BlockDirtPath} should drop
+     * Get the damage value that this {@link BlockPlankPath} should drop
      *
      * @param state The current {@link IBlockState}
      * @since 0.9.0
      */
     @Override
     public int damageDropped(IBlockState state) {
-        return ((BlockDirt.DirtType) state.getValue(VARIANT)).getMetadata();
+        return ((BlockPlanks.EnumType) state.getValue(VARIANT)).getMetadata();
     }
 
     /**
@@ -122,7 +125,7 @@ public class BlockDirtPath extends BlockPath {
 
         if (worldIn.getBlockState(pos.up()).getBlock().getMaterial().isSolid())
         {
-            worldIn.setBlockState(pos, this.getFallbackBlock().getDefaultState().withProperty(BlockDirt.VARIANT, state.getValue(BlockDirtPath.VARIANT)));
+            worldIn.setBlockState(pos, this.getFallbackBlock().getDefaultState().withProperty(BlockPlanks.VARIANT, state.getValue(BlockPlankPath.VARIANT)));
         }
     }
 }

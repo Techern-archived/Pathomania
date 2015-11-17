@@ -2,6 +2,7 @@ package com.techern.minecraft.pathomania;
 
 import com.techern.minecraft.pathomania.blocks.BlockDirtPath;
 import com.techern.minecraft.pathomania.blocks.BlockPath;
+import com.techern.minecraft.pathomania.blocks.BlockPlankPath;
 import com.techern.minecraft.pathomania.events.PathomaniaPlayerEvents;
 import com.techern.minecraft.pathomania.proxy.CommonProxy;
 import net.minecraftforge.common.MinecraftForge;
@@ -59,6 +60,9 @@ public class PathomaniaMod {
         GameRegistry.registerBlock(BlockPath.CLAY_PATH, "clay_path");
         GameRegistry.registerBlock(BlockPath.HARDENED_CLAY_PATH, "hardened_clay_path");
 
+
+        GameRegistry.registerBlock(BlockPlankPath.INSTANCE, "plank_path");
+
     }
 
 
@@ -75,6 +79,14 @@ public class PathomaniaMod {
 
         PROXY.registerBlockInventoryModel(BlockPath.CLAY_PATH, 0, "clay_path");
         PROXY.registerBlockInventoryModel(BlockPath.HARDENED_CLAY_PATH, 0, "hardened_clay_path");
+
+        PROXY.registerBlockInventoryModel(BlockPlankPath.INSTANCE, 0, "plank_path");
+        PROXY.registerBlockInventoryModel(BlockPlankPath.INSTANCE, 1, "plank_path");
+        PROXY.registerBlockInventoryModel(BlockPlankPath.INSTANCE, 2, "plank_path");
+        PROXY.registerBlockInventoryModel(BlockPlankPath.INSTANCE, 3, "plank_path");
+        PROXY.registerBlockInventoryModel(BlockPlankPath.INSTANCE, 4, "plank_path");
+        PROXY.registerBlockInventoryModel(BlockPlankPath.INSTANCE, 5, "plank_path");
+        PROXY.registerBlockInventoryModel(BlockPlankPath.INSTANCE, 5, "plank_path");
 
         MinecraftForge.EVENT_BUS.register(new PathomaniaPlayerEvents());
 
