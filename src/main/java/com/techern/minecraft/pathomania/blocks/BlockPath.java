@@ -92,7 +92,8 @@ public class BlockPath extends Block {
      * Queries the harvest level of this item stack for the specified tool class,
      * Returns -1 if this tool is not of the specified type
      *
-     * @param state@return Harvest level, or -1 if not the specified tool type.
+     * @param state
+     * @return Harvest level, or -1 if not the specified tool type.
      */
     @Override
     public int getHarvestLevel(IBlockState state) {

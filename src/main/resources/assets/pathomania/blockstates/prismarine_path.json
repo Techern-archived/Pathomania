@@ -1,0 +1,36 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "side": "blocks/prismarine_rough",
+      "top": "blocks/prismarine_rough",
+      "bottom": "blocks/prismarine_rough"
+    },
+    "model": "pathomania:cube_path_sided",
+    "uvlock": true
+  },
+  "variants": {
+    "variant": {
+      "prismarine": {
+      },
+      "prismarine_bricks": {
+        "textures": {
+          "side": "blocks/prismarine_bricks",
+          "top": "blocks/prismarine_bricks",
+          "bottom": "blocks/prismarine_bricks"
+        }
+      },
+      "dark_prismarine": {
+        "textures": {
+          "side": "blocks/prismarine_dark",
+          "top": "blocks/prismarine_dark",
+          "bottom": "blocks/prismarine_dark"
+        }
+      }
+    },
+
+    "inventory": [{
+
+    }]
+  }
+}

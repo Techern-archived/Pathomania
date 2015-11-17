@@ -6,3 +6,4 @@ tile.blockGravelPath.name=Gravel Path
 tile.blockClayPath.name=Clay Path
 tile.blockHardenedClayPath.name=Hardened Clay Path
 tile.blockPlankPath.name=Plank Path
+tile.blockPrismarinePath.name=Prismarine Path

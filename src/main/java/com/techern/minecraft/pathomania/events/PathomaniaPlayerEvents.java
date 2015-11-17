@@ -3,6 +3,7 @@ package com.techern.minecraft.pathomania.events;
 import com.techern.minecraft.pathomania.blocks.BlockDirtPath;
 import com.techern.minecraft.pathomania.blocks.BlockPath;
 import com.techern.minecraft.pathomania.blocks.BlockPlankPath;
+import com.techern.minecraft.pathomania.blocks.BlockPrismarinePath;
 import net.minecraft.block.*;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.ItemAxe;
@@ -50,6 +51,8 @@ public class PathomaniaPlayerEvents {
 
                     if (block instanceof BlockHardenedClay) {
                         event.world.setBlockState(event.pos, BlockPath.HARDENED_CLAY_PATH.getDefaultState());
+                    } else if (block instanceof BlockPrismarine) {
+                        event.world.setBlockState(event.pos, BlockPrismarinePath.INSTANCE.getDefaultState().withProperty(BlockPrismarinePath.VARIANT, state.getValue(BlockPrismarine.VARIANT)));
                     }
                 } else if (event.entityPlayer.getHeldItem().getItem() instanceof ItemAxe) {
 
