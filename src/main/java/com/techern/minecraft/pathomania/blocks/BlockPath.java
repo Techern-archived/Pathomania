@@ -66,6 +66,40 @@ public class BlockPath extends Block {
     }
 
     /**
+     * Checks if the specified tool type is efficient on this block,
+     * meaning that it digs at full speed.
+     *
+     * @param type
+     * @param state
+     */
+    @Override
+    public boolean isToolEffective(String type, IBlockState state) {
+        return fallbackBlock.isToolEffective(type, fallbackBlock.getDefaultState());
+    }
+
+    /**
+     * Queries the class of tool required to harvest this block, if null is returned
+     * we assume that anything can harvest this block.
+     *
+     * @param state
+     */
+    @Override
+    public String getHarvestTool(IBlockState state) {
+        return fallbackBlock.getHarvestTool(fallbackBlock.getDefaultState());
+    }
+
+    /**
+     * Queries the harvest level of this item stack for the specified tool class,
+     * Returns -1 if this tool is not of the specified type
+     *
+     * @param state@return Harvest level, or -1 if not the specified tool type.
+     */
+    @Override
+    public int getHarvestLevel(IBlockState state) {
+        return fallbackBlock.getHarvestLevel(fallbackBlock.getDefaultState());
+    }
+
+    /**
      * Creates a new {@link BlockPath}
      *
      * @param name The name of this {@link BlockPath}
