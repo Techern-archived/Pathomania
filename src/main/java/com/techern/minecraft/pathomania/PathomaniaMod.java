@@ -63,6 +63,7 @@ public class PathomaniaMod {
         GameRegistry.registerBlock(BlockPrismarinePath.INSTANCE, "prismarine_path");
 
         GameRegistry.registerBlock(BlockSandStonePath.INSTANCE, "sandstone_path");
+        GameRegistry.registerBlock(BlockRedSandstonePath.INSTANCE, "red_sandstone_path");
 
     }
 
@@ -96,6 +97,11 @@ public class PathomaniaMod {
         PROXY.registerBlockInventoryModel(BlockSandStonePath.INSTANCE, 0, "sandstone_path");
         PROXY.registerBlockInventoryModel(BlockSandStonePath.INSTANCE, 1, "sandstone_path");
         PROXY.registerBlockInventoryModel(BlockSandStonePath.INSTANCE, 2, "sandstone_path");
+
+        PROXY.registerBlockInventoryModel(BlockRedSandstonePath.INSTANCE, 0, "red_sandstone_path");
+        PROXY.registerBlockInventoryModel(BlockRedSandstonePath.INSTANCE, 1, "red_sandstone_path");
+        PROXY.registerBlockInventoryModel(BlockRedSandstonePath.INSTANCE, 2, "red_sandstone_path");
+        PROXY.registerBlockInventoryModel(BlockRedSandstonePath.INSTANCE, 2, "red_sandstone_path");
 
         MinecraftForge.EVENT_BUS.register(new PathomaniaPlayerEvents());
 
