@@ -40,6 +40,8 @@ public class PathomaniaPlayerEvents {
                         event.world.setBlockState(event.pos, BlockPath.GRAVEL_PATH.getDefaultState());
                     } else if (block instanceof BlockClay) {
                         event.world.setBlockState(event.pos, BlockPath.CLAY_PATH.getDefaultState());
+                    } else if (block instanceof BlockSand) {
+                        event.world.setBlockState(event.pos, BlockSandPath.INSTANCE.getDefaultState().withProperty(BlockSandPath.VARIANT, state.getValue(BlockSand.VARIANT)));
                     }
                 } else if (event.entityPlayer.getHeldItem().getItem() instanceof ItemPickaxe) {
 

@@ -1,0 +1,29 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "side": "blocks/sand",
+      "top": "blocks/sand",
+      "bottom": "blocks/sand"
+    },
+    "model": "pathomania:cube_path_sided",
+    "uvlock": true
+  },
+  "variants": {
+    "variant": {
+      "sand": {
+      },
+      "red_sand": {
+        "textures": {
+          "side": "blocks/red_sand",
+          "top": "blocks/red_sand",
+          "bottom": "blocks/red_sand"
+        }
+      }
+    },
+
+    "inventory": [{
+
+    }]
+  }
+}

@@ -65,6 +65,8 @@ public class PathomaniaMod {
         GameRegistry.registerBlock(BlockSandStonePath.INSTANCE, "sandstone_path");
         GameRegistry.registerBlock(BlockRedSandstonePath.INSTANCE, "red_sandstone_path");
 
+        GameRegistry.registerBlock(BlockSandPath.INSTANCE, "sand_path");
+
     }
 
 
@@ -102,6 +104,9 @@ public class PathomaniaMod {
         PROXY.registerBlockInventoryModel(BlockRedSandstonePath.INSTANCE, 1, "red_sandstone_path");
         PROXY.registerBlockInventoryModel(BlockRedSandstonePath.INSTANCE, 2, "red_sandstone_path");
         PROXY.registerBlockInventoryModel(BlockRedSandstonePath.INSTANCE, 2, "red_sandstone_path");
+
+        PROXY.registerBlockInventoryModel(BlockSandPath.INSTANCE, 0, "sand_path");
+        PROXY.registerBlockInventoryModel(BlockSandPath.INSTANCE, 1, "sand_path");
 
         MinecraftForge.EVENT_BUS.register(new PathomaniaPlayerEvents());
 
