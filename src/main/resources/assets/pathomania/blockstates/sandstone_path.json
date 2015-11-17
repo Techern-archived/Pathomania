@@ -1,0 +1,36 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "bottom": "blocks/sandstone_bottom",
+      "top": "blocks/sandstone_top",
+      "side": "blocks/sandstone_normal"
+    },
+    "model": "pathomania:cube_path_sided",
+    "uvlock": true
+  },
+  "variants": {
+    "variant": {
+      "sandstone": {
+      },
+      "chiseled_sandstone": {
+        "textures": {
+          "bottom": "blocks/sandstone_bottom",
+          "top": "blocks/sandstone_top",
+          "side": "blocks/sandstone_carved"
+        }
+      },
+      "smooth_sandstone": {
+        "textures": {
+          "bottom": "blocks/sandstone_bottom",
+          "top": "blocks/sandstone_top",
+          "side": "blocks/sandstone_smooth"
+        }
+      }
+    },
+
+    "inventory": [{
+
+    }]
+  }
+}

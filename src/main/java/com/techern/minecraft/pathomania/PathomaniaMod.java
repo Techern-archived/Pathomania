@@ -1,9 +1,6 @@
 package com.techern.minecraft.pathomania;
 
-import com.techern.minecraft.pathomania.blocks.BlockDirtPath;
-import com.techern.minecraft.pathomania.blocks.BlockPath;
-import com.techern.minecraft.pathomania.blocks.BlockPlankPath;
-import com.techern.minecraft.pathomania.blocks.BlockPrismarinePath;
+import com.techern.minecraft.pathomania.blocks.*;
 import com.techern.minecraft.pathomania.events.PathomaniaPlayerEvents;
 import com.techern.minecraft.pathomania.proxy.CommonProxy;
 import net.minecraftforge.common.MinecraftForge;
@@ -65,6 +62,8 @@ public class PathomaniaMod {
 
         GameRegistry.registerBlock(BlockPrismarinePath.INSTANCE, "prismarine_path");
 
+        GameRegistry.registerBlock(BlockSandStonePath.INSTANCE, "sandstone_path");
+
     }
 
 
@@ -93,6 +92,10 @@ public class PathomaniaMod {
         PROXY.registerBlockInventoryModel(BlockPrismarinePath.INSTANCE, 0, "prismarine_path");
         PROXY.registerBlockInventoryModel(BlockPrismarinePath.INSTANCE, 1, "prismarine_path");
         PROXY.registerBlockInventoryModel(BlockPrismarinePath.INSTANCE, 2, "prismarine_path");
+
+        PROXY.registerBlockInventoryModel(BlockSandStonePath.INSTANCE, 0, "sandstone_path");
+        PROXY.registerBlockInventoryModel(BlockSandStonePath.INSTANCE, 1, "sandstone_path");
+        PROXY.registerBlockInventoryModel(BlockSandStonePath.INSTANCE, 2, "sandstone_path");
 
         MinecraftForge.EVENT_BUS.register(new PathomaniaPlayerEvents());
 
