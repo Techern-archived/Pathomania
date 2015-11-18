@@ -10,3 +10,5 @@ tile.blockPrismarinePath.name=Prismarine Path
 tile.blockSandStonePath.name=Sandstone Path
 tile.blockRedSandstonePath.name=Red Sandstone Path
 tile.blockSandPath.name=Sand Path
+tile.blockCobblestonePath.name=Cobblestone Path
+tile.blockMossyCobblestonePath.name=Mossy Cobblestone Path

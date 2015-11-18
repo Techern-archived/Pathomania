@@ -3,6 +3,7 @@ package com.techern.minecraft.pathomania.events;
 import com.techern.minecraft.pathomania.blocks.*;
 import net.minecraft.block.*;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemSpade;
@@ -48,7 +49,11 @@ public class PathomaniaPlayerEvents {
                     IBlockState state = event.world.getBlockState(event.pos);
                     Block block = state.getBlock();
 
-                    if (block instanceof BlockHardenedClay) {
+                    if (block.getUnlocalizedName().equals(Blocks.cobblestone.getUnlocalizedName())) {
+                        event.world.setBlockState(event.pos, BlockPath.COBBLESTONE_PATH.getDefaultState());
+                    } else if (block.getUnlocalizedName().equals(Blocks.mossy_cobblestone.getUnlocalizedName())) {
+                        event.world.setBlockState(event.pos, BlockPath.MOSSY_COBBLESTONE_PATH.getDefaultState());
+                    } else if (block instanceof BlockHardenedClay) {
                         event.world.setBlockState(event.pos, BlockPath.HARDENED_CLAY_PATH.getDefaultState());
                     } else if (block instanceof BlockPrismarine) {
                         event.world.setBlockState(event.pos, BlockPrismarinePath.INSTANCE.getDefaultState().withProperty(BlockPrismarinePath.VARIANT, state.getValue(BlockPrismarine.VARIANT)));

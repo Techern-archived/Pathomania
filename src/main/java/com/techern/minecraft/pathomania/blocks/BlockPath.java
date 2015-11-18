@@ -49,6 +49,20 @@ public class BlockPath extends Block {
     public static BlockPath HARDENED_CLAY_PATH = new BlockPath("blockHardenedClayPath", Material.ground, Blocks.hardened_clay);
 
     /**
+     * The cobblestone {@link BlockPath} instance
+     *
+     * @since 0.9.0
+     */
+    public static BlockPath COBBLESTONE_PATH = new BlockPath("blockCobblestonePath", Material.ground, Blocks.cobblestone);
+
+    /**
+     * The mossy cobblestone {@link BlockPath} instance
+     *
+     * @since 0.9.0
+     */
+    public static BlockPath MOSSY_COBBLESTONE_PATH = new BlockPath("blockMossyCobblestonePath", Material.ground, Blocks.mossy_cobblestone);
+
+    /**
      * The {@link Block} to use as a fallback
      *
      * @since 0.0.1
