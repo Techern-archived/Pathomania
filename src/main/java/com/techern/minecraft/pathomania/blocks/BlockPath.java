@@ -63,6 +63,13 @@ public class BlockPath extends Block {
     public static BlockPath MOSSY_COBBLESTONE_PATH = new BlockPath("blockMossyCobblestonePath", Material.ground, Blocks.mossy_cobblestone);
 
     /**
+     * The glowstone {@link BlockPath} instance
+     *
+     * @since 0.9.0
+     */
+    public static Block GLOWSTONE_PATH = new BlockPath("blockGlowstonePath", Material.ground, Blocks.glowstone).setLightLevel(15).setLightOpacity(255);
+
+    /**
      * The {@link Block} to use as a fallback
      *
      * @since 0.0.1
