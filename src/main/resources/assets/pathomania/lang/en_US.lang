@@ -14,3 +14,4 @@ tile.blockCobblestonePath.name=Cobblestone Path
 tile.blockMossyCobblestonePath.name=Mossy Cobblestone Path
 tile.blockGlowstonePath.name=Glowstone Path
 tile.blockStonePath.name=Stone Path
+tile.blockBrickPath.name=Brick Path

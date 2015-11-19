@@ -53,6 +53,8 @@ public class PathomaniaPlayerEvents {
                         event.world.setBlockState(event.pos, BlockPath.COBBLESTONE_PATH.getDefaultState());
                     } else if (block.getUnlocalizedName().equals(Blocks.mossy_cobblestone.getUnlocalizedName())) {
                         event.world.setBlockState(event.pos, BlockPath.MOSSY_COBBLESTONE_PATH.getDefaultState());
+                    } else if (block.getUnlocalizedName().equals(Blocks.brick_block.getUnlocalizedName())) {
+                        event.world.setBlockState(event.pos, BlockPath.BRICK_PATH.getDefaultState());
                     } else if (block instanceof BlockHardenedClay) {
                         event.world.setBlockState(event.pos, BlockPath.HARDENED_CLAY_PATH.getDefaultState());
                     } else if (block instanceof BlockPrismarine) {

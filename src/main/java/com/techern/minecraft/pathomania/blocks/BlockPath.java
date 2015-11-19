@@ -70,6 +70,13 @@ public class BlockPath extends Block {
     public static Block GLOWSTONE_PATH = new BlockPath("blockGlowstonePath", Material.ground, Blocks.glowstone).setLightLevel(15).setLightOpacity(255);
 
     /**
+     * The brick {@link BlockPath} instance
+     *
+     * @since 0.9.0
+     */
+    public static BlockPath BRICK_PATH = new BlockPath("blockBrickPath", Material.ground, Blocks.brick_block);
+
+    /**
      * The {@link Block} to use as a fallback
      *
      * @since 0.0.1
