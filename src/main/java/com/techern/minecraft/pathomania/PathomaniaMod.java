@@ -72,6 +72,8 @@ public class PathomaniaMod {
 
         GameRegistry.registerBlock(BlockPath.GLOWSTONE_PATH, "glowstone_path");
 
+        GameRegistry.registerBlock(BlockStonePath.INSTANCE, "stone_path");
+
     }
 
 
@@ -117,6 +119,14 @@ public class PathomaniaMod {
         PROXY.registerBlockInventoryModel(BlockPath.MOSSY_COBBLESTONE_PATH, 0, "mossy_cobblestone_path");
 
         PROXY.registerBlockInventoryModel(BlockPath.GLOWSTONE_PATH, 0, "glowstone_path");
+
+        PROXY.registerBlockInventoryModel(BlockStonePath.INSTANCE, 0, "stone_path");
+        PROXY.registerBlockInventoryModel(BlockStonePath.INSTANCE, 1, "stone_path");
+        PROXY.registerBlockInventoryModel(BlockStonePath.INSTANCE, 2, "stone_path");
+        PROXY.registerBlockInventoryModel(BlockStonePath.INSTANCE, 3, "stone_path");
+        PROXY.registerBlockInventoryModel(BlockStonePath.INSTANCE, 4, "stone_path");
+        PROXY.registerBlockInventoryModel(BlockStonePath.INSTANCE, 5, "stone_path");
+        PROXY.registerBlockInventoryModel(BlockStonePath.INSTANCE, 6, "stone_path");
 
         MinecraftForge.EVENT_BUS.register(new PathomaniaPlayerEvents());
 
