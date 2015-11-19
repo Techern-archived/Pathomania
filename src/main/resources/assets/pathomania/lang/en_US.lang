@@ -16,3 +16,4 @@ tile.blockGlowstonePath.name=Glowstone Path
 tile.blockStonePath.name=Stone Path
 tile.blockBrickPath.name=Brick Path
 tile.blockStoneBrickPath.name=Stone Brick Path
+tile.blockStainedClayPath.name=Stained Clay Path

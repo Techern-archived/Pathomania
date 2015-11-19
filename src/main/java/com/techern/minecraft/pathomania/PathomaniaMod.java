@@ -78,6 +78,8 @@ public class PathomaniaMod {
 
         GameRegistry.registerBlock(BlockStoneBrickPath.INSTANCE, "stone_brick_path");
 
+        GameRegistry.registerBlock(BlockStainedClayPath.INSTANCE, "stained_clay_path");
+
     }
 
 
@@ -138,6 +140,23 @@ public class PathomaniaMod {
         PROXY.registerBlockInventoryModel(BlockStoneBrickPath.INSTANCE, 1, "stone_brick_path");
         PROXY.registerBlockInventoryModel(BlockStoneBrickPath.INSTANCE, 2, "stone_brick_path");
         PROXY.registerBlockInventoryModel(BlockStoneBrickPath.INSTANCE, 3, "stone_brick_path");
+
+        PROXY.registerBlockInventoryModel(BlockStainedClayPath.INSTANCE, 0, "stained_clay_path");
+        PROXY.registerBlockInventoryModel(BlockStainedClayPath.INSTANCE, 1, "stained_clay_path");
+        PROXY.registerBlockInventoryModel(BlockStainedClayPath.INSTANCE, 2, "stained_clay_path");
+        PROXY.registerBlockInventoryModel(BlockStainedClayPath.INSTANCE, 3, "stained_clay_path");
+        PROXY.registerBlockInventoryModel(BlockStainedClayPath.INSTANCE, 4, "stained_clay_path");
+        PROXY.registerBlockInventoryModel(BlockStainedClayPath.INSTANCE, 5, "stained_clay_path");
+        PROXY.registerBlockInventoryModel(BlockStainedClayPath.INSTANCE, 6, "stained_clay_path");
+        PROXY.registerBlockInventoryModel(BlockStainedClayPath.INSTANCE, 7, "stained_clay_path");
+        PROXY.registerBlockInventoryModel(BlockStainedClayPath.INSTANCE, 8, "stained_clay_path");
+        PROXY.registerBlockInventoryModel(BlockStainedClayPath.INSTANCE, 9, "stained_clay_path");
+        PROXY.registerBlockInventoryModel(BlockStainedClayPath.INSTANCE, 10, "stained_clay_path");
+        PROXY.registerBlockInventoryModel(BlockStainedClayPath.INSTANCE, 11, "stained_clay_path");
+        PROXY.registerBlockInventoryModel(BlockStainedClayPath.INSTANCE, 12, "stained_clay_path");
+        PROXY.registerBlockInventoryModel(BlockStainedClayPath.INSTANCE, 13, "stained_clay_path");
+        PROXY.registerBlockInventoryModel(BlockStainedClayPath.INSTANCE, 14, "stained_clay_path");
+        PROXY.registerBlockInventoryModel(BlockStainedClayPath.INSTANCE, 15, "stained_clay_path");
 
         MinecraftForge.EVENT_BUS.register(new PathomaniaPlayerEvents());
 

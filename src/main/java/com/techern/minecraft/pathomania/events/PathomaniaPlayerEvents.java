@@ -7,7 +7,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemSpade;
-import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -69,6 +68,8 @@ public class PathomaniaPlayerEvents {
                         event.world.setBlockState(event.pos, BlockStonePath.INSTANCE.getDefaultState().withProperty(BlockStonePath.VARIANT, state.getValue(BlockStone.VARIANT)));
                     } else if (block instanceof BlockStoneBrick) {
                         event.world.setBlockState(event.pos, BlockStoneBrickPath.INSTANCE.getDefaultState().withProperty(BlockStoneBrickPath.VARIANT, state.getValue(BlockStoneBrick.VARIANT)));
+                    } else if (block.getUnlocalizedName().equals(Blocks.stained_hardened_clay.getUnlocalizedName())) {
+                        event.world.setBlockState(event.pos, BlockStainedClayPath.INSTANCE.getDefaultState().withProperty(BlockStainedClayPath.VARIANT, state.getValue(BlockColored.COLOR)));
                     }
 
                 } else if (event.entityPlayer.getHeldItem().getItem() instanceof ItemAxe) {
