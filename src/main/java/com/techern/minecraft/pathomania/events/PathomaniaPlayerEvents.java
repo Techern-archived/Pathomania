@@ -67,6 +67,8 @@ public class PathomaniaPlayerEvents {
                         event.world.setBlockState(event.pos, BlockPath.GLOWSTONE_PATH.getDefaultState());
                     } else if (block instanceof BlockStone) {
                         event.world.setBlockState(event.pos, BlockStonePath.INSTANCE.getDefaultState().withProperty(BlockStonePath.VARIANT, state.getValue(BlockStone.VARIANT)));
+                    } else if (block instanceof BlockStoneBrick) {
+                        event.world.setBlockState(event.pos, BlockStoneBrickPath.INSTANCE.getDefaultState().withProperty(BlockStoneBrickPath.VARIANT, state.getValue(BlockStoneBrick.VARIANT)));
                     }
 
                 } else if (event.entityPlayer.getHeldItem().getItem() instanceof ItemAxe) {

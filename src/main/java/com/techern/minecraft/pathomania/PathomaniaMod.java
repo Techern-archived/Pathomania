@@ -76,6 +76,8 @@ public class PathomaniaMod {
 
         GameRegistry.registerBlock(BlockPath.BRICK_PATH, "brick_path");
 
+        GameRegistry.registerBlock(BlockStoneBrickPath.INSTANCE, "stone_brick_path");
+
     }
 
 
@@ -131,6 +133,11 @@ public class PathomaniaMod {
         PROXY.registerBlockInventoryModel(BlockStonePath.INSTANCE, 6, "stone_path");
 
         PROXY.registerBlockInventoryModel(BlockPath.BRICK_PATH, 0, "brick_path");
+
+        PROXY.registerBlockInventoryModel(BlockStoneBrickPath.INSTANCE, 0, "stone_brick_path");
+        PROXY.registerBlockInventoryModel(BlockStoneBrickPath.INSTANCE, 1, "stone_brick_path");
+        PROXY.registerBlockInventoryModel(BlockStoneBrickPath.INSTANCE, 2, "stone_brick_path");
+        PROXY.registerBlockInventoryModel(BlockStoneBrickPath.INSTANCE, 3, "stone_brick_path");
 
         MinecraftForge.EVENT_BUS.register(new PathomaniaPlayerEvents());
 
