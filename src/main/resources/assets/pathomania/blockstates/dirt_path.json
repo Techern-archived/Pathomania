@@ -2,11 +2,9 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "side": "blocks/dirt",
-      "top": "blocks/dirt",
-      "bottom": "blocks/dirt"
+      "all": "blocks/dirt"
     },
-    "model": "pathomania:cube_path_sided",
+    "model": "pathomania:cube_path_all",
     "uvlock": true
   },
   "variants": {
@@ -15,9 +13,7 @@
       },
       "coarse_dirt": {
         "textures": {
-          "side": "blocks/coarse_dirt",
-          "top": "blocks/coarse_dirt",
-          "bottom": "blocks/coarse_dirt"
+          "all": "blocks/coarse_dirt"
         }
       },
       "podzol": {
@@ -25,7 +21,8 @@
           "side": "blocks/dirt_podzol_side",
           "top": "blocks/dirt_podzol_top",
           "bottom": "blocks/dirt"
-        }
+        },
+        "model": "pathomania:cube_path_sided"
       }
     },
 

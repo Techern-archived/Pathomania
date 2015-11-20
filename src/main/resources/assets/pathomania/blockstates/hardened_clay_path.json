@@ -2,11 +2,9 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "side": "blocks/hardened_clay",
-      "top": "blocks/hardened_clay",
-      "bottom": "blocks/hardened_clay"
+      "all": "blocks/hardened_clay"
     },
-    "model": "pathomania:cube_path_sided",
+    "model": "pathomania:cube_path_all",
     "uvlock": true
   },
   "variants": {

@@ -2,11 +2,9 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "bottom": "blocks/stonebrick",
-      "top": "blocks/stonebrick",
-      "side": "blocks/stonebrick"
+      "all": "blocks/stonebrick"
     },
-    "model": "pathomania:cube_path_sided",
+    "model": "pathomania:cube_path_all",
     "uvlock": true
   },
   "variants": {
@@ -15,23 +13,17 @@
       },
       "mossy_stonebrick": {
         "textures": {
-          "bottom": "blocks/stonebrick_mossy",
-          "top": "blocks/stonebrick_mossy",
-          "side": "blocks/stonebrick_mossy"
+          "all": "blocks/stonebrick_mossy"
         }
       },
       "cracked_stonebrick": {
         "textures": {
-          "bottom": "blocks/stonebrick_cracked",
-          "top": "blocks/stonebrick_cracked",
-          "side": "blocks/stonebrick_cracked"
+          "all": "blocks/stonebrick_cracked"
         }
       },
       "chiseled_stonebrick": {
         "textures": {
-          "bottom": "blocks/stonebrick_carved",
-          "top": "blocks/stonebrick_carved",
-          "side": "blocks/stonebrick_carved"
+          "all": "blocks/stonebrick_carved"
         }
       }
     },

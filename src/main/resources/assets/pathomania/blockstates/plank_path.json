@@ -2,11 +2,9 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "side": "blocks/planks_oak",
-      "top": "blocks/planks_oak",
-      "bottom": "blocks/planks_oak"
+      "all": "blocks/planks_oak"
     },
-    "model": "pathomania:cube_path_sided",
+    "model": "pathomania:cube_path_all",
     "uvlock": true
   },
   "variants": {
@@ -15,37 +13,27 @@
       },
       "birch": {
         "textures": {
-          "side": "blocks/planks_birch",
-          "top": "blocks/planks_birch",
-          "bottom": "blocks/planks_birch"
+          "all": "blocks/planks_birch"
         }
       },
       "spruce": {
         "textures": {
-          "side": "blocks/planks_spruce",
-          "top": "blocks/planks_spruce",
-          "bottom": "blocks/planks_spruce"
+          "all": "blocks/planks_spruce"
         }
       },
       "acacia": {
         "textures": {
-          "side": "blocks/planks_acacia",
-          "top": "blocks/planks_acacia",
-          "bottom": "blocks/planks_acacia"
+          "all": "blocks/planks_acacia"
         }
       },
       "jungle": {
         "textures": {
-          "side": "blocks/planks_jungle",
-          "top": "blocks/planks_jungle",
-          "bottom": "blocks/planks_jungle"
+          "all": "blocks/planks_jungle"
         }
       },
       "dark_oak": {
         "textures": {
-          "side": "blocks/planks_big_oak",
-          "top": "blocks/planks_big_oak",
-          "bottom": "blocks/planks_big_oak"
+          "all": "blocks/planks_big_oak"
         }
       }
     },

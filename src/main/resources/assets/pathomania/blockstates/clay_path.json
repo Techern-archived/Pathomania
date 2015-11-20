@@ -2,11 +2,9 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "side": "blocks/clay",
-      "top": "blocks/clay",
-      "bottom": "blocks/clay"
+      "all": "blocks/clay"
     },
-    "model": "pathomania:cube_path_sided",
+    "model": "pathomania:cube_path_all",
     "uvlock": true
   },
   "variants": {

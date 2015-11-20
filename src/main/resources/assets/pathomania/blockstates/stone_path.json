@@ -2,11 +2,9 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "bottom": "blocks/stone",
-      "top": "blocks/stone",
-      "side": "blocks/stone"
+      "all": "blocks/stone"
     },
-    "model": "pathomania:cube_path_sided",
+    "model": "pathomania:cube_path_all",
     "uvlock": true
   },
   "variants": {
@@ -15,44 +13,32 @@
       },
       "granite": {
         "textures": {
-          "bottom": "blocks/stone_granite",
-          "top": "blocks/stone_granite",
-          "side": "blocks/stone_granite"
+          "all": "blocks/stone_granite"
         }
       },
       "smooth_granite": {
         "textures": {
-          "bottom": "blocks/stone_granite_smooth",
-          "top": "blocks/stone_granite_smooth",
-          "side": "blocks/stone_granite_smooth"
+          "all": "blocks/stone_granite_smooth"
         }
       },
       "diorite": {
         "textures": {
-          "bottom": "blocks/stone_diorite",
-          "top": "blocks/stone_diorite",
-          "side": "blocks/stone_diorite"
+          "all": "blocks/stone_diorite"
         }
       },
       "smooth_diorite": {
         "textures": {
-          "bottom": "blocks/stone_diorite_smooth",
-          "top": "blocks/stone_diorite_smooth",
-          "side": "blocks/stone_diorite_smooth"
+          "all": "blocks/stone_diorite_smooth"
         }
       },
       "andesite": {
         "textures": {
-          "bottom": "blocks/stone_andesite",
-          "top": "blocks/stone_andesite",
-          "side": "blocks/stone_andesite"
+          "all": "blocks/stone_andesite"
         }
       },
       "smooth_andesite": {
         "textures": {
-          "bottom": "blocks/stone_andesite_smooth",
-          "top": "blocks/stone_andesite_smooth",
-          "side": "blocks/stone_andesite_smooth"
+          "all": "blocks/stone_andesite_smooth"
         }
       }
     },

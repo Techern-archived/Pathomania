@@ -2,11 +2,9 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "side": "blocks/hardened_clay_stained_white",
-      "top": "blocks/hardened_clay_stained_white",
-      "bottom": "blocks/hardened_clay_stained_white"
+      "all": "blocks/hardened_clay_stained_white"
     },
-    "model": "pathomania:cube_path_sided",
+    "model": "pathomania:cube_path_all",
     "uvlock": true
   },
   "variants": {
@@ -16,107 +14,77 @@
       },
       "orange": {
         "textures": {
-          "side": "blocks/hardened_clay_stained_orange",
-          "top": "blocks/hardened_clay_stained_orange",
-          "bottom": "blocks/hardened_clay_stained_orange"
+          "all": "blocks/hardened_clay_stained_orange"
         }
       },
       "magenta": {
         "textures": {
-          "side": "blocks/hardened_clay_stained_magenta",
-          "top": "blocks/hardened_clay_stained_magenta",
-          "bottom": "blocks/hardened_clay_stained_magenta"
+          "all": "blocks/hardened_clay_stained_magenta"
         }
       },
       "light_blue": {
         "textures": {
-          "side": "blocks/hardened_clay_stained_light_blue",
-          "top": "blocks/hardened_clay_stained_light_blue",
-          "bottom": "blocks/hardened_clay_stained_light_blue"
+          "all": "blocks/hardened_clay_stained_light_blue"
         }
       },
       "yellow": {
         "textures": {
-          "side": "blocks/hardened_clay_stained_yellow",
-          "top": "blocks/hardened_clay_stained_yellow",
-          "bottom": "blocks/hardened_clay_stained_yellow"
+          "all": "blocks/hardened_clay_stained_yellow"
         }
       },
       "lime": {
         "textures": {
-          "side": "blocks/hardened_clay_stained_lime",
-          "top": "blocks/hardened_clay_stained_lime",
-          "bottom": "blocks/hardened_clay_stained_lime"
+          "all": "blocks/hardened_clay_stained_lime"
         }
       },
       "pink": {
         "textures": {
-          "side": "blocks/hardened_clay_stained_pink",
-          "top": "blocks/hardened_clay_stained_pink",
-          "bottom": "blocks/hardened_clay_stained_pink"
+          "all": "blocks/hardened_clay_stained_pink"
         }
       },
       "gray": {
         "textures": {
-          "side": "blocks/hardened_clay_stained_gray",
-          "top": "blocks/hardened_clay_stained_gray",
-          "bottom": "blocks/hardened_clay_stained_gray"
+          "all": "blocks/hardened_clay_stained_gray"
         }
       },
       "silver": {
         "textures": {
-          "side": "blocks/hardened_clay_stained_silver",
-          "top": "blocks/hardened_clay_stained_silver",
-          "bottom": "blocks/hardened_clay_stained_silver"
+          "all": "blocks/hardened_clay_stained_silver"
         }
       },
       "cyan": {
         "textures": {
-          "side": "blocks/hardened_clay_stained_cyan",
-          "top": "blocks/hardened_clay_stained_cyan",
-          "bottom": "blocks/hardened_clay_stained_cyan"
+          "all": "blocks/hardened_clay_stained_cyan"
         }
       },
       "purple": {
         "textures": {
-          "side": "blocks/hardened_clay_stained_purple",
-          "top": "blocks/hardened_clay_stained_purple",
-          "bottom": "blocks/hardened_clay_stained_purple"
+          "all": "blocks/hardened_clay_stained_purple"
         }
       },
       "blue": {
         "textures": {
-          "side": "blocks/hardened_clay_stained_blue",
-          "top": "blocks/hardened_clay_stained_blue",
-          "bottom": "blocks/hardened_clay_stained_blue"
+          "all": "blocks/hardened_clay_stained_blue"
         }
       },
       "brown": {
         "textures": {
-          "side": "blocks/hardened_clay_stained_brown",
-          "top": "blocks/hardened_clay_stained_brown",
-          "bottom": "blocks/hardened_clay_stained_brown"
+          "all": "blocks/hardened_clay_stained_brown"
         }
       },
       "green": {
         "textures": {
-          "side": "blocks/hardened_clay_stained_green",
-          "top": "blocks/hardened_clay_stained_green",
-          "bottom": "blocks/hardened_clay_stained_green"
+          "all": "blocks/hardened_clay_stained_green"
         }
       },
       "red": {
         "textures": {
-          "side": "blocks/hardened_clay_stained_red",
-          "top": "blocks/hardened_clay_stained_red",
-          "bottom": "blocks/hardened_clay_stained_red"
+          "all": "blocks/hardened_clay_stained_red"
         }
       },
       "black": {
         "textures": {
-          "side": "blocks/hardened_clay_stained_black",
-          "top": "blocks/hardened_clay_stained_black",
-          "bottom": "blocks/hardened_clay_stained_black"
+          "all": "blocks/hardened_clay_stained_black"
         }
       }
     },
