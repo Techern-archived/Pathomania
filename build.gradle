@@ -21,7 +21,7 @@ plugins {
 }
 
 version = "1.0.0-SNAPSHOT"
-group= "com.techern.forge.assets.pathomania" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group= "com.techern.minecraft.pathomania" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Pathomania"
 
 sourceCompatibility = JavaVersion.VERSION_1_7
